@@ -34,8 +34,7 @@ import java.util.stream.Collectors;
 /**
  * ${dataName}服务实现
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://www.code-nav.cn">编程导航学习圈</a>
+ *
  */
 @Service
 @Slf4j
@@ -45,11 +44,11 @@ public class ${upperDataKey}ServiceImpl extends ServiceImpl<${upperDataKey}Mappe
     private UserService userService;
 
     /**
-     * 校验数据
-     *
-     * @param ${dataKey}
-     * @param add      对创建的数据进行校验
-     */
+    * 校验数据
+    *
+    * @param ${dataKey}
+    * @param add      对创建的数据进行校验
+    */
     @Override
     public void valid${upperDataKey}(${upperDataKey} ${dataKey}, boolean add) {
         ThrowUtils.throwIf(${dataKey} == null, ErrorCode.PARAMS_ERROR);
@@ -68,11 +67,11 @@ public class ${upperDataKey}ServiceImpl extends ServiceImpl<${upperDataKey}Mappe
     }
 
     /**
-     * 获取查询条件
-     *
-     * @param ${dataKey}QueryRequest
-     * @return
-     */
+    * 获取查询条件
+    *
+    * @param ${dataKey}QueryRequest
+    * @return
+    */
     @Override
     public QueryWrapper<${upperDataKey}> getQueryWrapper(${upperDataKey}QueryRequest ${dataKey}QueryRequest) {
         QueryWrapper<${upperDataKey}> queryWrapper = new QueryWrapper<>();
@@ -116,12 +115,12 @@ public class ${upperDataKey}ServiceImpl extends ServiceImpl<${upperDataKey}Mappe
     }
 
     /**
-     * 获取${dataName}封装
-     *
-     * @param ${dataKey}
-     * @param request
-     * @return
-     */
+    * 获取${dataName}封装
+    *
+    * @param ${dataKey}
+    * @param request
+    * @return
+    */
     @Override
     public ${upperDataKey}VO get${upperDataKey}VO(${upperDataKey} ${dataKey}, HttpServletRequest request) {
         // 对象转封装类
@@ -160,12 +159,12 @@ public class ${upperDataKey}ServiceImpl extends ServiceImpl<${upperDataKey}Mappe
     }
 
     /**
-     * 分页获取${dataName}封装
-     *
-     * @param ${dataKey}Page
-     * @param request
-     * @return
-     */
+    * 分页获取${dataName}封装
+    *
+    * @param ${dataKey}Page
+    * @param request
+    * @return
+    */
     @Override
     public Page<${upperDataKey}VO> get${upperDataKey}VOPage(Page<${upperDataKey}> ${dataKey}Page, HttpServletRequest request) {
         List<${upperDataKey}> ${dataKey}List = ${dataKey}Page.getRecords();

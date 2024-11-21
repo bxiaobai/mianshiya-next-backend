@@ -12,58 +12,57 @@ import java.util.List;
 /**
  * ${dataName}视图
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://www.code-nav.cn">编程导航学习圈</a>
+ *
  */
 @Data
 public class ${upperDataKey}VO implements Serializable {
 
     /**
-     * id
-     */
+    * id
+    */
     private Long id;
 
     /**
-     * 标题
-     */
+    * 标题
+    */
     private String title;
 
     /**
-     * 内容
-     */
+    * 内容
+    */
     private String content;
 
     /**
-     * 创建用户 id
-     */
+    * 创建用户 id
+    */
     private Long userId;
 
     /**
-     * 创建时间
-     */
+    * 创建时间
+    */
     private Date createTime;
 
     /**
-     * 更新时间
-     */
+    * 更新时间
+    */
     private Date updateTime;
 
     /**
-     * 标签列表
-     */
+    * 标签列表
+    */
     private List<String> tagList;
 
     /**
-     * 创建用户信息
-     */
+    * 创建用户信息
+    */
     private UserVO user;
 
     /**
-     * 封装类转对象
-     *
-     * @param ${dataKey}VO
-     * @return
-     */
+    * 封装类转对象
+    *
+    * @param ${dataKey}VO
+    * @return
+    */
     public static ${upperDataKey} voToObj(${upperDataKey}VO ${dataKey}VO) {
         if (${dataKey}VO == null) {
             return null;
@@ -76,11 +75,11 @@ public class ${upperDataKey}VO implements Serializable {
     }
 
     /**
-     * 对象转封装类
-     *
-     * @param ${dataKey}
-     * @return
-     */
+    * 对象转封装类
+    *
+    * @param ${dataKey}
+    * @return
+    */
     public static ${upperDataKey}VO objToVo(${upperDataKey} ${dataKey}) {
         if (${dataKey} == null) {
             return null;

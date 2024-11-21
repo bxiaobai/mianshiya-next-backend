@@ -34,8 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 帖子接口
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 @RestController
 @RequestMapping("/post")
@@ -51,12 +50,12 @@ public class PostController {
     // region 增删改查
 
     /**
-     * 创建
-     *
-     * @param postAddRequest
-     * @param request
-     * @return
-     */
+    * 创建
+    *
+    * @param postAddRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/add")
     public BaseResponse<Long> addPost(@RequestBody PostAddRequest postAddRequest, HttpServletRequest request) {
         if (postAddRequest == null) {
@@ -80,12 +79,12 @@ public class PostController {
     }
 
     /**
-     * 删除
-     *
-     * @param deleteRequest
-     * @param request
-     * @return
-     */
+    * 删除
+    *
+    * @param deleteRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/delete")
     public BaseResponse<Boolean> deletePost(@RequestBody DeleteRequest deleteRequest, HttpServletRequest request) {
         if (deleteRequest == null || deleteRequest.getId() <= 0) {
@@ -105,11 +104,11 @@ public class PostController {
     }
 
     /**
-     * 更新（仅管理员）
-     *
-     * @param postUpdateRequest
-     * @return
-     */
+    * 更新（仅管理员）
+    *
+    * @param postUpdateRequest
+    * @return
+    */
     @PostMapping("/update")
     @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public BaseResponse<Boolean> updatePost(@RequestBody PostUpdateRequest postUpdateRequest) {
@@ -133,11 +132,11 @@ public class PostController {
     }
 
     /**
-     * 根据 id 获取
-     *
-     * @param id
-     * @return
-     */
+    * 根据 id 获取
+    *
+    * @param id
+    * @return
+    */
     @GetMapping("/get/vo")
     public BaseResponse<PostVO> getPostVOById(long id, HttpServletRequest request) {
         if (id <= 0) {
@@ -151,11 +150,11 @@ public class PostController {
     }
 
     /**
-     * 分页获取列表（仅管理员）
-     *
-     * @param postQueryRequest
-     * @return
-     */
+    * 分页获取列表（仅管理员）
+    *
+    * @param postQueryRequest
+    * @return
+    */
     @PostMapping("/list/page")
     @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public BaseResponse<Page<Post>> listPostByPage(@RequestBody PostQueryRequest postQueryRequest) {
@@ -167,12 +166,12 @@ public class PostController {
     }
 
     /**
-     * 分页获取列表（封装类）
-     *
-     * @param postQueryRequest
-     * @param request
-     * @return
-     */
+    * 分页获取列表（封装类）
+    *
+    * @param postQueryRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/list/page/vo")
     public BaseResponse<Page<PostVO>> listPostVOByPage(@RequestBody PostQueryRequest postQueryRequest,
             HttpServletRequest request) {
@@ -186,12 +185,12 @@ public class PostController {
     }
 
     /**
-     * 分页获取当前用户创建的资源列表
-     *
-     * @param postQueryRequest
-     * @param request
-     * @return
-     */
+    * 分页获取当前用户创建的资源列表
+    *
+    * @param postQueryRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/my/list/page/vo")
     public BaseResponse<Page<PostVO>> listMyPostVOByPage(@RequestBody PostQueryRequest postQueryRequest,
             HttpServletRequest request) {
@@ -212,12 +211,12 @@ public class PostController {
     // endregion
 
     /**
-     * 分页搜索（从 ES 查询，封装类）
-     *
-     * @param postQueryRequest
-     * @param request
-     * @return
-     */
+    * 分页搜索（从 ES 查询，封装类）
+    *
+    * @param postQueryRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/search/page/vo")
     public BaseResponse<Page<PostVO>> searchPostVOByPage(@RequestBody PostQueryRequest postQueryRequest,
             HttpServletRequest request) {
@@ -229,12 +228,12 @@ public class PostController {
     }
 
     /**
-     * 编辑（用户）
-     *
-     * @param postEditRequest
-     * @param request
-     * @return
-     */
+    * 编辑（用户）
+    *
+    * @param postEditRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/edit")
     public BaseResponse<Boolean> editPost(@RequestBody PostEditRequest postEditRequest, HttpServletRequest request) {
         if (postEditRequest == null || postEditRequest.getId() <= 0) {

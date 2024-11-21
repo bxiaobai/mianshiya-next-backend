@@ -18,8 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * 帖子点赞服务实现
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 @Service
 public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb>
@@ -29,12 +28,12 @@ public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb
     private PostService postService;
 
     /**
-     * 点赞
-     *
-     * @param postId
-     * @param loginUser
-     * @return
-     */
+    * 点赞
+    *
+    * @param postId
+    * @param loginUser
+    * @return
+    */
     @Override
     public int doPostThumb(long postId, User loginUser) {
         // 判断实体是否存在，根据类别获取实体
@@ -53,12 +52,12 @@ public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb
     }
 
     /**
-     * 封装了事务的方法
-     *
-     * @param userId
-     * @param postId
-     * @return
-     */
+    * 封装了事务的方法
+    *
+    * @param userId
+    * @param postId
+    * @return
+    */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public int doPostThumbInner(long userId, long postId) {

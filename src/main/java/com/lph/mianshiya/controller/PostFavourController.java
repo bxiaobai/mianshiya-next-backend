@@ -26,8 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 帖子收藏接口
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 @RestController
 @RequestMapping("/post_favour")
@@ -44,12 +43,12 @@ public class PostFavourController {
     private UserService userService;
 
     /**
-     * 收藏 / 取消收藏
-     *
-     * @param postFavourAddRequest
-     * @param request
-     * @return resultNum 收藏变化数
-     */
+    * 收藏 / 取消收藏
+    *
+    * @param postFavourAddRequest
+    * @param request
+    * @return resultNum 收藏变化数
+    */
     @PostMapping("/")
     public BaseResponse<Integer> doPostFavour(@RequestBody PostFavourAddRequest postFavourAddRequest,
             HttpServletRequest request) {
@@ -64,11 +63,11 @@ public class PostFavourController {
     }
 
     /**
-     * 获取我收藏的帖子列表
-     *
-     * @param postQueryRequest
-     * @param request
-     */
+    * 获取我收藏的帖子列表
+    *
+    * @param postQueryRequest
+    * @param request
+    */
     @PostMapping("/my/list/page")
     public BaseResponse<Page<PostVO>> listMyFavourPostByPage(@RequestBody PostQueryRequest postQueryRequest,
                                                              HttpServletRequest request) {
@@ -86,11 +85,11 @@ public class PostFavourController {
     }
 
     /**
-     * 获取用户收藏的帖子列表
-     *
-     * @param postFavourQueryRequest
-     * @param request
-     */
+    * 获取用户收藏的帖子列表
+    *
+    * @param postFavourQueryRequest
+    * @param request
+    */
     @PostMapping("/list/page")
     public BaseResponse<Page<PostVO>> listFavourPostByPage(@RequestBody PostFavourQueryRequest postFavourQueryRequest,
             HttpServletRequest request) {

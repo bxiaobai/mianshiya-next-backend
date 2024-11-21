@@ -6,17 +6,16 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 网络工具类
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 public class NetUtils {
 
     /**
-     * 获取客户端 IP 地址
-     *
-     * @param request
-     * @return
-     */
+    * 获取客户端 IP 地址
+    *
+    * @param request
+    * @return
+    */
     public static String getIpAddress(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {

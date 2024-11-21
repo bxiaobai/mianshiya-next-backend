@@ -16,8 +16,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 /**
  * 增量同步帖子到 es
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 // todo 取消注释开启任务
 //@Component
@@ -31,8 +30,8 @@ public class IncSyncPostToEs {
     private PostEsDao postEsDao;
 
     /**
-     * 每分钟执行一次
-     */
+    * 每分钟执行一次
+    */
     @Scheduled(fixedRate = 60 * 1000)
     public void run() {
         // 查询近 5 分钟内的数据

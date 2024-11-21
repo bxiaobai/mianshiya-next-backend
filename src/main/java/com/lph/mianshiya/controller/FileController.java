@@ -26,8 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * 文件接口
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 @RestController
 @RequestMapping("/file")
@@ -41,13 +40,13 @@ public class FileController {
     private CosManager cosManager;
 
     /**
-     * 文件上传
-     *
-     * @param multipartFile
-     * @param uploadFileRequest
-     * @param request
-     * @return
-     */
+    * 文件上传
+    *
+    * @param multipartFile
+    * @param uploadFileRequest
+    * @param request
+    * @return
+    */
     @PostMapping("/upload")
     public BaseResponse<String> uploadFile(@RequestPart("file") MultipartFile multipartFile,
                                            UploadFileRequest uploadFileRequest, HttpServletRequest request) {
@@ -85,11 +84,11 @@ public class FileController {
     }
 
     /**
-     * 校验文件
-     *
-     * @param multipartFile
-     * @param fileUploadBizEnum 业务类型
-     */
+    * 校验文件
+    *
+    * @param multipartFile
+    * @param fileUploadBizEnum 业务类型
+    */
     private void validFile(MultipartFile multipartFile, FileUploadBizEnum fileUploadBizEnum) {
         // 文件大小
         long fileSize = multipartFile.getSize();

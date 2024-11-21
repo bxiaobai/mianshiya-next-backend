@@ -21,8 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * 帖子收藏服务实现
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 @Service
 public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFavour>
@@ -32,12 +31,12 @@ public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFav
     private PostService postService;
 
     /**
-     * 帖子收藏
-     *
-     * @param postId
-     * @param loginUser
-     * @return
-     */
+    * 帖子收藏
+    *
+    * @param postId
+    * @param loginUser
+    * @return
+    */
     @Override
     public int doPostFavour(long postId, User loginUser) {
         // 判断是否存在
@@ -64,12 +63,12 @@ public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFav
     }
 
     /**
-     * 封装了事务的方法
-     *
-     * @param userId
-     * @param postId
-     * @return
-     */
+    * 封装了事务的方法
+    *
+    * @param userId
+    * @param postId
+    * @return
+    */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public int doPostFavourInner(long userId, long postId) {

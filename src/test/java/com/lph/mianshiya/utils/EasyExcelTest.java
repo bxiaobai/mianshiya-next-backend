@@ -3,7 +3,7 @@ package com.lph.mianshiya.utils;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.mianshiyaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
@@ -14,10 +14,9 @@ import java.util.Map;
 /**
  * EasyExcel 测试
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
-@mianshiyaTest
+@SpringBootTest
 public class EasyExcelTest {
 
     @Test
